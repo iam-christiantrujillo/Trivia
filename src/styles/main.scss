@@ -1,0 +1,105 @@
+$base_color:  aliceblue;
+
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: $base_color;
+}
+
+.formulario{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.select{
+    width: 70%;
+    height: 45px;
+    font-size: 15px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+    &:focus{ //& significa el elemento padre en este caso el select que esta arriba
+        outline: none;
+    }
+}
+
+
+.description{
+    font-size: 18px;
+}
+
+.botonInicio{
+    height: 50px;
+    width: auto;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: white;
+    margin: 20px;
+    font-size: 15px;
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        background-color: $base_color;
+    }
+}
+
+
+
+.boxPreguntas{
+    background-color: $base_color;
+    margin:20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.pregunta{
+    font-size: 20px;
+}
+
+.boxAnswers{
+    display: flex;
+    align-items: center;
+    
+}
+
+.opcion{
+    font-size: 18px;
+}
+
+.checar{
+    height: auto;
+    width: auto;
+
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: white;
+    margin: 20px 20px 0 20px;
+    font-size: 15px;
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        background-color: rgb(253, 211, 183);
+    }
+}
