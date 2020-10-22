@@ -1,11 +1,11 @@
-class Game{
+class Game2{
 
     constructor(questions){
         this.questions = questions
         
     }
 
-    multipleQuestions(){
+    trueOrFalse(){
 
         // const nav = document.querySelector('nav')
         // const puntaje = document.createElement('div')
@@ -46,40 +46,41 @@ class Game{
         
             
 
-            for( var j=0; j<this.questions[i].incorrect_answers.length; j++){
+           
+            const labelI = document.createElement('label')
 
-                const label = document.createElement('label')
-
-                const incorrect = document.createElement('input')
+            const incorrect = document.createElement('input')
                 // incorrect.className = 'opcion'
-                incorrect.type = "checkbox"
-                incorrect.value = false
-                incorrect.className = "respuestaI"
+            incorrect.type = "checkbox"
+            incorrect.value = false
+            incorrect.className = "respuestaI"
                 
-                label.innerHTML = this.questions[i].incorrect_answers[j]
-                label.className = 'label'
+            labelI.innerHTML = this.questions[i].incorrect_answers
+            labelI.className = 'label'
 
-                label.append(incorrect)
+                
 
-                boxAnswers.append(label)
+                
 
-                incorrect.addEventListener('click', () => {
-                    const si = 'INCORRECTO'
+            incorrect.addEventListener('click', () => {
+                const si = 'INCORRECTO'
                     // const valor = 'CORRECTO'
                     // console.log(valor, 'Esta bine')
-                    boton.addEventListener('click', ()=>{
-                        if(si === 'INCORRECTO'){
-                            console.log('wuuuu no')
-                            boxPregunta.style.backgroundColor = '#ffacac'
-                            boxPregunta.removeChild(boton)
-                        }
-                    })
+                boton.addEventListener('click', ()=>{
+                    if(si === 'INCORRECTO'){
+                        console.log('wuuuu no')
+                        boxPregunta.style.backgroundColor = '#ffacac'
+                        boxPregunta.removeChild(boton)
+                    }
                 })
-            }
+            })
+            
+            labelI.append(incorrect)
 
+                
             
             label.append(correct)
-            boxAnswers.append(label)
+            boxAnswers.append(label, labelI)
             
             boxPregunta.append(pregunta, boxAnswers, boton)
             boxPreguntas.append(boxPregunta)
@@ -111,4 +112,4 @@ class Game{
 
 }
 
-export default Game;
+export default Game2;
