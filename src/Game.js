@@ -111,4 +111,11 @@ class Game{
 
 }
 
+console.log('edición al proyecto')
+console.log('estos son console.logs de relleno')
+console.log('estos son console.logs de relleno')
+console.log('estos son console.logs de relleno')
+console.log('estos son console.logs de relleno')
+console.log('estos son console.logs de relleno')
+
 export default Game;
